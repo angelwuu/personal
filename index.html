@@ -28,7 +28,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      gap: 24px; /* 新增：增加按鈕間距 */
+      gap: 24px;
     }
 
     .header .right .dot {
@@ -48,27 +48,42 @@
       padding: 10px 0 10px 10px;
       background-color: white;
       border-bottom: 1px solid #ddd;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
     .story {
-      margin-right: 15px;
+      flex: 0 0 auto;
+      width: 80px;
       text-align: center;
-      flex-shrink: 0;
+      margin-right: 15px;
+      scroll-snap-align: start;
     }
 
     .story-image {
-      width: 70px;
-      height: 70px;
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
-      padding: 2px;
       background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .story-image img {
-      width: 100%;
-      height: 100%;
+    .white-ring {
+      width: 66px;
+      height: 66px;
       border-radius: 50%;
-      border: 2px solid white;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .white-ring img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
       object-fit: cover;
     }
 
@@ -211,14 +226,61 @@
   <!-- 限時動態 -->
   <div class="story-bar">
     <div class="story">
-      <div class="story-image"><img src="https://picsum.photos/id/1012/40" /></div>
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/1012/40" />
+        </div>
+      </div>
       <div class="story-name">限時動態</div>
     </div>
     <div class="story">
-      <div class="story-image"><img src="https://picsum.photos/id/102/100" /></div>
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/102/100" />
+        </div>
+      </div>
       <div class="story-name">ration_418</div>
     </div>
-    <!-- 可再加更多 story -->
+    <div class="story">
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/103/100" />
+        </div>
+      </div>
+      <div class="story-name">cafe_day</div>
+    </div>
+    <div class="story">
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/104/100" />
+        </div>
+      </div>
+      <div class="story-name">cozyroom</div>
+    </div>
+    <div class="story">
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/105/100" />
+        </div>
+      </div>
+      <div class="story-name">foodie_12</div>
+    </div>
+    <div class="story">
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/106/100" />
+        </div>
+      </div>
+      <div class="story-name">nightwalk</div>
+    </div>
+    <div class="story">
+      <div class="story-image">
+        <div class="white-ring">
+          <img src="https://picsum.photos/id/107/100" />
+        </div>
+      </div>
+      <div class="story-name">catlover</div>
+    </div>
   </div>
 
   <!-- 發文 -->
@@ -263,4 +325,5 @@
 
 </body>
 </html>
+
 
